@@ -1,0 +1,147 @@
+.hero {
+  height: 60rem;
+  padding-top: 12rem;
+  width: 100%;
+  background: url("/public/i/top_BG.png") center center / cover no-repeat;
+  position: relative;
+
+  &_wrapper {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &_family {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_img {
+      pointer-events: none;
+      width: 70%;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -9rem;
+        left: -13rem;
+        width: 90rem;
+      }
+    }
+  }
+
+  &_pack {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 8rem;
+    width: 100%;
+    z-index: 60;
+
+    img {
+      width: 42%;
+    }
+  }
+
+  &_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+  }
+
+  &_title {
+    width: 100%;
+    img {
+      width: 38rem;
+    }
+  }
+
+  &_subtitle {
+    position: absolute;
+    bottom: 11rem;
+    right: 10rem;
+    width: 50%;
+    img {
+      width: 40%;
+    }
+  }
+
+  &_link {
+    cursor: pointer;
+    font-size: toRem(24);
+    color: #ed1c24;
+    right: 30rem;
+    position: absolute;
+    bottom: 9rem;
+    line-height: 1.1;
+    border-bottom: 0.2rem solid #ed1c24;
+    transition: 0.2s linear;
+    &:hover {
+      color: $blue;
+      border-bottom: 0.2rem solid $blue;
+    }
+  }
+
+  &_btn {
+    margin-top: 1rem;
+    margin-right: -2rem;
+  }
+
+
+  &_dividers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 40;
+    transform: translateY(29rem);
+  }
+
+  &_date {
+    display: block;
+    transform: translateX(23rem);
+    font-size: toRem(20);
+    color: #011689;
+  }
+
+  &_message {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0rem 0rem 2rem 1rem;
+    width: toRem(372);
+    height: toRem(130);
+    transform: translateX(-30%);
+
+    img  {
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+    }
+    p {
+      display: block;
+      font-size: toRem(18);
+      color: #1b4598;
+    }
+    a {
+      margin-top: 0.7rem;
+      display: block;
+      font-size: toRem(28);
+      color: #1b4598;
+    }
+
+  }
+
+  &_phone {
+    margin-top: -1.2rem;
+    transform: translateX(20%);
+  }
+
+}

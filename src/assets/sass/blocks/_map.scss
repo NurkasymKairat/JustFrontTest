@@ -1,0 +1,128 @@
+.map {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  position: relative;
+  z-index: 40;
+  height: 46rem;
+  background: url("/public/i/bg.png") center center / cover no-repeat;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 15rem;
+    background: url("/public/i/refblock.png") center center / contain no-repeat;
+
+    display: block;
+    position: absolute;
+
+    top: -12.6rem;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  &_info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_title {
+    text-transform: uppercase;
+    color: #ed1c24;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.1rem;
+  }
+
+  &_subtitle {
+    display: block;
+    line-height: 1.1;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #011689;
+  }
+
+  &_money {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 90%;
+    }
+  }
+
+  &_city {
+    width: 70%;
+    img {
+      width: 90%;
+    }
+  }
+
+  &_btn {
+    margin: toRem(28) 0;
+  }
+
+  &_link {
+    transition: 0.2s linear;
+    font-size: toRem(24);
+    color: #ed1c24;
+    border-bottom: toRem(2) solid #ed1c24;
+    padding-bottom: 0.5rem;
+    &:hover {
+      color: $blue;
+      border-bottom: toRem(2) solid $blue;
+    }
+  }
+
+  .promo_divider {
+    position: relative;
+  transform: translateY(-7.6rem);
+    z-index: 85;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &_img {
+      width: 100%;
+      position: absolute;
+      z-index: 85;
+      img {
+        width: 100%;
+      }
+    }
+
+    &_title {
+      position: relative;
+      z-index: 75;
+      font-size: toRem(36);
+      color: $white;
+      text-transform: uppercase;
+      margin-bottom: 1.7rem;
+    }
+    &_link {
+      position: relative;
+      z-index: 75;
+      text-transform: uppercase;
+      font-size: toRem(31);
+      display: block;
+      color: #edd9a6;
+      border-bottom: toRem(2) solid #edd9a6;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+}

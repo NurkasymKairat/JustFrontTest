@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    @include font('Inter-Bold', 0.700vw);
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+
+
+
+
+.title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: toRem(54);
+    color: #354499;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: toRem(54);
+    text-align: center;
+    line-height: 1.1;
+    color: #354499;
+}
+
+.burger {
+    display: block;
+}
+
+.error_page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hero_info_full {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        .title {
+            line-height: 1.2;
+            font-size: 4rem;
+        }
+    }
+
+    .error_btn {
+        .btn {
+            display: block;
+            min-width: 15rem;
+        }
+    }
+}
+
+
+
+.btn {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: block;
+    color: $white;
+    width: toRem(352);
+    height: 4.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $red;
+    background-image: linear-gradient(0.0deg, #b10001 0%, #e52122 100%);
+    font-size: toRem(39);
+    border-radius: toRem(27);
+    padding: 1.7rem 0 1.8rem 0;
+    transition: 0.2s ease-in-out;
+    &:hover {
+        box-shadow: toRem(0) toRem(10) toRem(15) toRem(2) rgba(0, 0, 0, 0.2) inset;
+    }
+
+    &:disabled {
+        &:hover {
+            border: toRem(6) solid rgba(255, 255, 255, 0);
+            box-shadow: none;
+        }
+    }
+
+    &:active {
+        background-color: $btn-hover;
+        transform: scale(0.98);
+        box-shadow: toRem(1) toRem(0) toRem(5) toRem(2) rgba(0, 0, 0, 0.72) inset;
+    }
+
+    img {
+        width: 3rem;
+        position: absolute;
+        right: 44%;
+        top: 18%;
+    }
+}
+
+
+
+//@include responsive {
+//    html,
+//    body {
+//        font-size: 3vw !important;
+//    }
+//    .container {
+//        width: 95% !important;
+//        padding: 0 0.5rem;
+//    }
+//
+//    .title {
+//        font-size: toRem(50);
+//    }
+//
+//    .subtitle {
+//        font-size: 2.2rem;
+//    }
+//
+//
+//    .btn {
+//        font-size: 2.8rem;
+//        min-width: 24rem;
+//    }
+//    .error_page {
+//        .hero_info_full {
+//            .title {
+//                font-size: 3rem;
+//            }
+//
+//        }
+//
+//
+//    }
+//
+//}
+
+[v-cloak] {
+    display: none !important;
+}
+
+sup {
+    vertical-align: top;
+    font-size: 0.5em;
+    display: inline-block;
+    transform: translateY(-10%);
+}
+
+// ::-webkit-input-placeholder {
+//     color: $gray;
+// }
+
+// :-ms-input-placeholder {
+//     color: $gray;
+// }
+
+// ::placeholder {
+//     color: $gray;
+// }
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.fade-top-enter-active,
+.fade-top-leave-active {
+    transition: all 0.3s;
+}
+.fade-top-enter,
+.fade-top-leave-to {
+    transform: translateY(-50px);
+    opacity: 0;
+}
