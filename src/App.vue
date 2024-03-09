@@ -10,6 +10,9 @@
           <div class="hero_family_img">
             <img src="/public/i/family.png" alt="">
           </div>
+          <div class="hero_family_img_mobile">
+            <img src="/public/i/mobile_family.png" alt="">
+          </div>
         </div>
         <div class="hero_info">
           <div class="hero_title">
@@ -21,6 +24,9 @@
               <img v-if="loader" src="/public/i/loader.svg" alt="">
               {{ inGame }}
             </a>
+          </div>
+          <div class="hero_money_mobile">
+            <img src="/public/i/mobile_money.png" alt="">
           </div>
           <div class="hero_subtitle">
             <img src="/public/i/hero_red_title.png" alt="">
@@ -102,7 +108,7 @@
     <div class="promo_divider">
 
       <div class="promo_divider_title">
-        Расскажи другу об Акции и получи 100 тенге на счет!
+        Расскажи другу <br> об Акции и получи 100 тенге на счет!
       </div>
       <a href="#" class="promo_divider_link">
         подробнее

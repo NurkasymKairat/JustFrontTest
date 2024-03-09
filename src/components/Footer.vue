@@ -10,7 +10,7 @@ export default {
       <div class="footer_wrapper">
         <div class="footer_info">
           Телефон горячей линии: <span>8 800 070 70 47</span><br>
-          Период Акции: с 01 сентября по 30 ноября 2023 года
+          <p>Период Акции: <br> с 01 сентября по 30 ноября <br> 2023 года</p>
         </div>
         <div class="footer_social">
           <a href="#">

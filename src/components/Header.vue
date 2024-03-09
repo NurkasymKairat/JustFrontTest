@@ -2,7 +2,7 @@
   <header ref="header" class="header">
     <div class="container">
       <div class="header_wrapper">
-        <div class="menu">
+        <div :class="{ 'menu_active': isShow }" class="menu">
           <a href="#" class="menu_link lang">
             КАЗ
           </a>
@@ -22,11 +22,22 @@
           <a href="#" class="menu_link">
             личный кабинет
           </a>
+
+
         </div>
         
         <a href="/" class="header_logo">
           <img src="/public/i/logo.png" alt="">
         </a>
+        <div
+            @click="handleBurger"
+            :class="{ burger_active: isShow }"
+            class="burger"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </header>
@@ -37,28 +48,24 @@
     props: {
       text: String,
       isTrue: Boolean,
+
+    },
+    data() {
+      return {
+        isShow: false,
+      }
     },
     mounted() {
       // this.scrollHeader();
     },
     methods: {
-      scrollHeader() {
-        const scrollFunc = () => {
-          const header = this.$refs.header;
-          const headerH = header.clientHeight;
-
-          document.onscroll = () => {
-            let scroll = window.scrollY;
-
-            if (scroll > headerH) {
-              header.classList.add("header_active");
-            } else {
-              header.classList.remove("header_active");
-            }
-          };
-        };
-        return scrollFunc();
-      },
+      handleBurger() {
+          if(this.isShow) {
+            this.isShow = false;
+          } else {
+            this.isShow = true;
+          }
+      }
     },
   }
 </script>

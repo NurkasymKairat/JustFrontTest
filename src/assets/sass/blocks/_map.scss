@@ -112,6 +112,9 @@
       color: $white;
       text-transform: uppercase;
       margin-bottom: 1.7rem;
+      br {
+        display: none;
+      }
     }
     &_link {
       position: relative;
@@ -125,4 +128,69 @@
     }
   }
 
+}
+
+
+@include responsive {
+  .map {
+    height: auto;
+    padding-bottom: 5rem;
+    &:before {
+      height: 20rem;
+      top: -20rem;
+      background: url("/public/i/mobile_refblock.png") center center / contain no-repeat;
+    }
+
+    .promo_divider {
+      transform: translateY(-17rem);
+    }
+
+    .promo_divider_title {
+      text-align: center;
+      width: 75%;
+      font-size: 2.8rem;
+      line-height: 1.1;
+      br {
+        display: block;
+      }
+    }
+
+    .promo_divider_link {
+      font-size: 2.3rem;
+    }
+
+    &_wrapper {
+      margin-top: -9rem;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
+
+    &_city {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+
+    &_info {
+      width: 100%;
+    }
+
+    &_title {
+      font-size: 2.8rem;
+    }
+
+    &_subtitle {
+      display: inline-block;
+      font-size: 2.4rem;
+    }
+
+    &_btn {
+      margin: 2rem 0;
+    }
+
+    &_link {
+      font-size: 1.8rem;
+    }
+  }
 }
